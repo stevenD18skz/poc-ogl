@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFF9F2;
+  --foreground: #3D3129;
+  --card: #FFFFFF;
+  --primary: #7C5D4B;
+  --primary-foreground: #FFF9F2;
+  --secondary: #A8C69F;
+  --accent: #F4A261;
+  --muted: #E8E1D9;
+  --border: #D1C5B9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: 'Outfit', 'Inter', system-ui, sans-serif;
+  --font-serif: 'Montserrat', 'Georgia', serif;
+}
+
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    @apply transition-colors duration-500 font-sans;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: radial-gradient(circle at top right, rgba(244, 162, 97, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(168, 198, 159, 0.15), transparent 40%);
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-xl;
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+}
