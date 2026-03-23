@@ -14,7 +14,7 @@ export default function Home() {
         <div className="hidden md:flex gap-8 text-sm font-medium text-primary/70">
           <a href="#about" className="hover:text-primary transition-colors">Objetivo</a>
           <a href="#performance" className="hover:text-primary transition-colors">Parámetros</a>
-          <a href="#game" className="hover:text-primary transition-colors">El Proyecto</a>
+          <a href="game" className="hover:text-primary transition-colors">El Proyecto</a>
         </div>
         <button className="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full shadow-md hover:bg-primary/90 transition-all hover:scale-105">
           Ver Código
@@ -34,9 +34,9 @@ export default function Home() {
             Este repositorio es un campo de pruebas dedicado a evaluar el rendimiento y flexibilidad de la librería <b>OGL</b> para nuestro próximo proyecto de simulación.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="px-8 py-4 bg-accent text-white font-bold rounded-2xl shadow-xl shadow-accent/20 hover:shadow-2xl hover:bg-accent/90 transition-all hover:-translate-y-1">
+            <a href="/game" className="px-8 py-4 bg-accent text-white font-bold rounded-2xl shadow-xl shadow-accent/20 hover:shadow-2xl hover:bg-accent/90 transition-all hover:-translate-y-1 text-center">
               Explorar PoC
-            </button>
+            </a>
             <button className="px-8 py-4 bg-white text-primary border-2 border-primary/10 font-bold rounded-2xl hover:bg-muted/30 transition-all">
               Documentación OGL
             </button>
